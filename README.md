@@ -74,16 +74,12 @@ $$
 where, the derivatives are discretely approximated with the forward difference over the nearest neighboring pixels. Given a set of height pairs, we learn the parameters of network $\Phi{(\cdot)}$ by minimizing the reconstruction errors based on normal vectors. Specifically, the squared errors of normal vectors for a pair $(h_o(u,v),h_g(u,v))$ are defined as
 
 $$
-\begin{equation}
 \begin{aligned}
-\mathcal{L} =& \sum_{(u,v) \in \Omega}\|
-\mathbf{n}(h_o(u,v)) - \mathbf{n}(h_g(u,v)+\Phi{(h_g(u,v))}) \|_2^2 \\ =&
-\sum_{(u,v) \in \Omega}
-\|
-\mathbf{n}(h_o(u,v)) - \mathbf{n}(\phi(u,v)) 
-\|_2^2,
+\mathcal{L} &= \sum_{(u,v) \in \Omega}
+\|\mathbf{n}(h_o(u,v)) - \mathbf{n}(h_g(u,v)+\Phi{(h_g(u,v))}) \|_2^2 \\ 
+&=\sum_{(u,v) \in \Omega}
+\| \mathbf{n}(h_o(u,v)) - \mathbf{n}(\phi(u,v)) \|_2^2,
 \end{aligned}
-\end{equation}
 $$
 
 where, $\Omega$ indicates the definition domain in $\mathbb{R}^2$, $\Phi(h_g)$ and $\phi=h_g+\Phi(h_g)$ are the prediction of our network and the reconstructed height map respectively. 
