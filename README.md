@@ -75,12 +75,12 @@ where, the derivatives are discretely approximated with the forward difference o
 
 $$
 \begin{equation}{\label{eqn:lossfunction}}
-\begin{split}
+\begin{aligned}
 \mathcal{L} =& \sum\limits_{(u,v) \in \Omega}\begin{Vmatrix}
 \mathbf{n}(h_o(u,v)) - \mathbf{n}(h_g(u,v)+\Phi{(h_g(u,v))}) \end{Vmatrix}_2^2 \\ =&
 \sum\limits_{(u,v) \in \Omega}\begin{Vmatrix}
 \mathbf{n}(h_o(u,v)) - \mathbf{n}(\phi(u,v)) \end{Vmatrix}_2^2,
-\end{split}
+\end{aligned}
 \end{equation}
 $$
 
