@@ -44,8 +44,8 @@ Figure 3: Some samples of our Height-Grayscale Dataset. The images shown in the 
   ├──  ...  
   ```
 
-```
-The dataset can be downloaded [here](https://drive.google.com/file/d/1iJMFjMDVSZ9sHRI6yvFQwFcDvYKllno1/view?usp=sharing).
+
+#### The dataset can be downloaded [here](https://drive.google.com/file/d/1iJMFjMDVSZ9sHRI6yvFQwFcDvYKllno1/view?usp=sharing).
 
 
 ## Citation
