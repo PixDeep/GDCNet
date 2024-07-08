@@ -28,7 +28,7 @@ we define the optimization objective based on the local orientation of a surface
 Therefore, given a grayscale image $h_g(u,v)$, we intend to remove the false contours by minimizing the reconstruction error between the original normals $\mathbf{n}(h_o(u,v))$ and the reconstructed normals $\mathbf{n}(h_g(u,v)+ r(u,v))$ under the constraints of rounding error bounds,
 
 $$
-\begin{equation}{\label{eqn:optimization}}
+\begin{equation}
 \begin{split}
 \min_{r(u,v)} &\left \|\mathbf{n}(h_g(u,v)+r(u,v))-\mathbf{n}(h_o(u,v))\right \|_2^2 \\
 &s.t. \qquad r(u,v) \leq 0.5.\\
@@ -46,7 +46,7 @@ Given a training dataset (pairs of $h_o(u,v)$ and $h_g(u,v)$),
 we can design and train a neural network $\Phi{(h_g(u,v))}$ to predict the residual error $r(u,v)$, by minimizing the total reconstructed normal errors over a training set,
 
 $$
-\begin{equation}{\label{eqn:optfunction}}
+\begin{equation}
 \min_{\Phi} \sum_i \begin{Vmatrix}
 \mathbf{n}(h_g^i(u,v)+\Phi{(h_g^i(u,v))}) - \mathbf{n}(h_o^i(u,v)) \end{Vmatrix}_2^2.
 \end{equation}
@@ -74,7 +74,7 @@ $$
 where, the derivatives are discretely approximated with the forward difference over the nearest neighboring pixels. Given a set of height pairs, we learn the parameters of network $\Phi{(\cdot)}$ by minimizing the reconstruction errors based on normal vectors. Specifically, the squared errors of normal vectors for a pair $(h_o(u,v),h_g(u,v))$ are defined as
 
 $$
-\begin{equation}{\label{eqn:lossfunction}}
+\begin{equation}
 \begin{aligned}
 \mathcal{L} =& \sum\limits_{(u,v) \in \Omega}\begin{Vmatrix}
 \mathbf{n}(h_o(u,v)) - \mathbf{n}(h_g(u,v)+\Phi{(h_g(u,v))}) \end{Vmatrix}_2^2 \\ =&
