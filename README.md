@@ -32,7 +32,7 @@ $$
 \begin{split}
 \min_{r(u,v)} &\left \|\mathbf{n}(h_g(u,v)+r(u,v))-\mathbf{n}(h_o(u,v))\right \|_2^2 \\
 &s.t. \qquad r(u,v) \leq 0.5.\\
-&  \qquad \quad \;\;\! r(u,v) \geq -0.5.
+&  \qquad \quad r(u,v) \geq -0.5.
 \end{split}
 \end{equation}
 $$
@@ -75,7 +75,7 @@ where, the derivatives are discretely approximated with the forward difference o
 
 $$
 \begin{aligned}
-\mathcal{L} &= \sum_{(u,v) \in \Omega}
+\mathbf{L} &= \sum_{(u,v) \in \Omega}
 \|\mathbf{n}(h_o(u,v)) - \mathbf{n}(h_g(u,v)+\Phi{(h_g(u,v))}) \|_2^2 \\ 
 &=\sum_{(u,v) \in \Omega}
 \| \mathbf{n}(h_o(u,v)) - \mathbf{n}(\phi(u,v)) \|_2^2,
